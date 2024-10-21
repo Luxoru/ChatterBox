@@ -1,6 +1,8 @@
 package me.luxoru.chatterbox.commons.packet;
 
 import lombok.Getter;
+import me.luxoru.chatterbox.commons.packet.client.ClientBoundConnectionAckPacket;
+import me.luxoru.chatterbox.commons.packet.client.ClientBoundPacket;
 import me.luxoru.chatterbox.commons.packet.server.ServerBoundConnectionPacket;
 import me.luxoru.netsync.commons.Packet;
 
@@ -17,7 +19,8 @@ public final class ChatterBoxPacketFactory {
     static {
         packets.put(1, ServerBoundConnectionPacket.class);
         packetToIdMap.put(ServerBoundConnectionPacket.class, 1);
-
+        packets.put(2, ClientBoundConnectionAckPacket.class);
+        packetToIdMap.put(ClientBoundConnectionAckPacket.class, 2);
     }
 
 
